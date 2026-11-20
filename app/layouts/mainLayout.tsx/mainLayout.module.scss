@@ -1,0 +1,17 @@
+.mainLayoutWrapper {
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+.lightTheme {
+    @extend .mainLayoutWrapper;
+    background-color: whitesmoke;
+}
+
+.darkTheme {
+    @extend .mainLayoutWrapper;
+    background-color: #4f4f4f;
+
+
+}

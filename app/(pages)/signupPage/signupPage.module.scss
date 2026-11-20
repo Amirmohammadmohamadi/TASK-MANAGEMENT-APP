@@ -1,0 +1,100 @@
+.signupWrapper {
+    width: 35%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.184);
+    border-radius: 30px;
+}
+
+.formHeader {
+    font-size: 40px;
+    font-weight: 900;
+    color: #ccc;
+    filter: drop-shadow(-2px 3px 2px rgba(0, 0, 0, 0.586));
+}
+
+.singupForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+    
+
+    .input {
+        border-radius: 6px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.144);
+        outline: none;
+        padding: 5px ;
+        font-weight: 600;
+        display: flex;
+        width: 100%;
+
+        &::placeholder {
+            font-size: 10px;
+            transform: translateY(-3px);
+        }
+    }
+
+    .inputError {
+        font-size: 10px;
+        font-weight: 700;
+        color: rgb(99, 99, 99);
+    }
+
+    .button {
+        background-color: black;
+        color: white;
+        border-radius: 6px;
+        padding: 5px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .loginLink {
+        font-size: 12px;
+        font-weight: 700;
+        position: relative;
+        color: #ccc;
+        filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.564));
+        cursor: pointer;
+        width: fit-content;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0px;
+            background-color: #ccc;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.399);
+            transition: width 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 2px;
+            z-index: -20;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    .passWrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .passIcon {
+            position: absolute;
+            right: 5px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    }
+}
